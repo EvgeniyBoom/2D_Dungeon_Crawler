@@ -23,12 +23,12 @@ public class TileManager {
         this.gp = gp;
 
         tile = new Tile[100];
-        mapTileNum = new int [gp.maxScreenCol][gp.maxScreenRow];
-        //mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
+        // mapTileNum = new int [gp.maxScreenCol][gp.maxScreenRow];
+        mapTileNum = new int [gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
-        loadSingleMap("/maps/map01.txt");
-        //loadWorldMap("/maps/world01(59x35).txt");
+        // loadSingleMap("/res/maps/map01.txt");
+        loadWorldMap("/res/maps/world01(59x35).txt");
     }
 
     public void getTileImage() {
@@ -46,7 +46,8 @@ public class TileManager {
         setup(9, "Grass/Grass_part_5", false);
 
         // Start true indexing
-        setup(10, "RoomBorder/Black_tile", false);
+        // setup(10, "RoomBorder/Black_tile", false);
+        setup(10, "Grass/Grass_part_5", false);
         setup(11, "RoomBorder/Room_border_1", true);
         setup(12, "RoomBorder/Room_border_2", true);
         setup(13, "RoomBorder/Room_border_3", true);
@@ -97,6 +98,7 @@ public class TileManager {
         setup(53, "RoomFloor/Room_wooden_floor_withCarpet_15", false);
         setup(54, "RoomFloor/Room_wooden_floor_withCarpet_16", false);
 
+        setup(55, "CastleWall/CastleWall_part8", false);
 
 
     }
@@ -108,7 +110,7 @@ public class TileManager {
         try {
 
             tile[index] = new Tile();
-            tile[index].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/tiles/" + imagePath + ".png")));
+            tile[index].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/res/tiles/" + imagePath + ".png")));
             tile[index].image = uTool.scaleImage(tile[index].image, gp.tileSize, gp.tileSize);
             tile[index].collision = collision;
 

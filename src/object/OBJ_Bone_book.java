@@ -16,7 +16,7 @@ public class OBJ_Bone_book extends SuperObject{
 
         name = "Bone_book";
         try {
-            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/objects/Bone_book.png")));
+            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/res/objects/Bone_book.png")));
             uTool.scaleImage(image, gp.tileSize, gp.tileSize);
 
         } catch (IOException e) {

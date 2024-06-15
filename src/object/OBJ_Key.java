@@ -16,7 +16,7 @@ public class OBJ_Key extends SuperObject {
 
         name = "Key";
         try {
-            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/objects/Golden_key.png")));
+            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/res/objects/Golden_key.png")));
             uTool.scaleImage(image, gp.tileSize, gp.tileSize);
 
         } catch (IOException e) {

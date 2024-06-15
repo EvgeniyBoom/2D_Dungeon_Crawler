@@ -17,11 +17,11 @@ public class Sound {
 
     public Sound() {
 
-        soundURL[0] = getClass().getResource("/sounds/background_ost.wav");
-        soundURL[1] = getClass().getResource("/sounds/book_pickup.wav");
-        soundURL[2] = getClass().getResource("/sounds/door_opens.wav");
-        soundURL[3] = getClass().getResource("/sounds/key_pickup.wav");
-        soundURL[4] = getClass().getResource("/sounds/trumpets.wav");
+        soundURL[0] = getClass().getResource("/res/sounds/background_ost.wav");
+        soundURL[1] = getClass().getResource("/res/sounds/book_pickup.wav");
+        soundURL[2] = getClass().getResource("/res/sounds/door_opens.wav");
+        soundURL[3] = getClass().getResource("/res/sounds/key_pickup.wav");
+        soundURL[4] = getClass().getResource("/res/sounds/trumpets.wav");
     }
 
     public void setFile(int i) {

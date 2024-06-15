@@ -41,8 +41,8 @@ public class Player extends Entity{
     }
     public void setDefaultValues() {
 
-        worldX = (int) (gp.tileSize * 9.5);
-        worldY = (int) (gp.tileSize * 5.5);
+        worldX = (int) (gp.tileSize * 29); // 9.5
+        worldY = (int) (gp.tileSize * 18); // 5.5
         speed = 5;
         direction = "down";
         direction_memory = "right";
@@ -76,7 +76,7 @@ public class Player extends Entity{
         BufferedImage image = null;
 
         try {
-            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/player/" + imageName + ".png")));
+            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/res/player/" + imageName + ".png")));
             image = uTool.scaleImage(image, gp.tileSize, gp.tileSize);
 
         } catch (IOException e) {

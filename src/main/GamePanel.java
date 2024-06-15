@@ -67,11 +67,20 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void setupGame() {
 
-        aSetter.setObject_Key(0, 9, 4);
-        aSetter.setObject_Door(1, 10, 10);
-        aSetter.setObject_Door(2, 11, 10);
-        aSetter.setObject_Chest(3, 12, 3);
-        aSetter.setObject_Bone_book(4, 12, 4);
+        // SingleMap Objects //
+        // aSetter.setObject_Key(0, 9, 4);
+        // aSetter.setObject_Door(1, 10, 10);
+        // aSetter.setObject_Door(2, 11, 10);
+        // aSetter.setObject_Chest(3, 12, 3);
+        // aSetter.setObject_Bone_book(4, 12, 4);
+
+        // WorldMap Objects //
+        aSetter.setObject_Key(0, 9, 30);
+        aSetter.setObject_Key(5, 49, 30);
+        aSetter.setObject_Door(1, 9, 12);
+        aSetter.setObject_Door(2, 19, 6);
+        aSetter.setObject_Chest(3, 29, 6);
+        aSetter.setObject_Bone_book(4, 41, 35);
 
         gameState = titleState;
 
@@ -167,8 +176,8 @@ public class GamePanel extends JPanel implements Runnable{
         // OTHERS
         else {
             // TILE
-            tileM.drawSingleMap(g2);
-            //tileM.drawWorldMap(g2);
+            // tileM.drawSingleMap(g2);
+            tileM.drawWorldMap(g2);
 
             // OBJECT
             for(int i = 0; i < obj.length; i++) {
@@ -217,8 +226,8 @@ public class GamePanel extends JPanel implements Runnable{
         // OTHERS
         else {
             // TILE
-            tileM.drawSingleMap(g2);
-            //tileM.drawWorldMap(g2);
+            // tileM.drawSingleMap(g2);
+            tileM.drawWorldMap(g2);
 
             // OBJECT
             for(int i = 0; i < obj.length; i++) {
